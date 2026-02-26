@@ -2,8 +2,13 @@
 
 This repository contains the source code for the **Approximated Debiased Lasso (ADL)** algorithm, designed for online statistical inference in high-dimensional generalized linear models (GLMs) with streaming data. The algorithm is particularly useful for scenarios where data arrives sequentially, and efficient, real-time inference is required.
 
+**Recommended citation:** Han, R., Luo, L., Luo, Y., Lin, Y., & Huang, J. (2024). Adaptive debiased lasso in high-dimensional GLMs with streaming data. arXiv preprint arXiv:2405.18284.
+
 ---
 
+**Remark:** This implementation also encompasses the Online Debiased Stochastic Gradient Descent (OnlineDSGD) algorithm in [Han, et al., 2024](https://academic.oup.com/biomet/article/111/1/93/7232226) for linear models. To utilize OnlineDSGD, simply set `family = "gaussian"` (e.g., within `run_table2.py`). This configuration directs the script to generate linear model data and perform inference using the OnlineDSGD method.
+
+---
 ## Repository Structure
 
 The repository is organized as follows:
@@ -42,11 +47,11 @@ Below is a list of execution files for reproducing numerical results of ADL pres
 
 ### Algorithm Core Functions
 
-* [adl.py]: This file implements the **Approximated Debiased Lasso (ADL) algorithm**, the main method proposed in the paper for online statistical inference in high-dimensional GLMs.
+* [adl.py]: This file implements the **Approximated Debiased Lasso (ADL)**, the main method proposed in the paper for online statistical inference in high-dimensional GLMs.
 <br>
 * [adl_realdata.py]: This file implements  the ADL algorithm for real data analysis, which is compatible with sparse arrays.
 <br>
-* [radar.py]: This file contains the implementation of the **Regularization Annealed Epoch Dual Averaging (RADAR)** and **Adaptive RADAR algorithms**, which are core components of the ADL algorithm.
+* [radar.py]: This file contains the implementation of the **Regularization Annealed Epoch Dual Averaging (RADAR)** and **Adaptive RADAR**, which are core components of the ADL algorithm.
 
 
 ### Helper Functions
@@ -96,7 +101,7 @@ python process.py
 
 The processed data will be saved as sparse matrices in `bigram_X.npz` and `bigram_y.npz` for further analysis. For convenience and to facilitate an easier walkthrough of the code, we have included these two processed data files in [click here](https://drive.google.com/drive/folders/1olYl-iqU4_pOgmdSgUYuL90zrnfRXQ4a?usp=sharing). Users may skip the feature extraction step and proceed directly to online inference if desired.
 
-As described in Section 5 of the main text, we selected three terms of interest: “investment”, “schedule”, and “per cent” for statistical inference. These terms correspond to feature indices 6795, 7856, and 22608, respectively. Users can specify which feature to analyze by modifying line 13 of the script file `run_realdata.py`.py. The trace plot and test prediction error will be saved in a folder, for example, `./realdata_result/feature6795`. Online estimates and confidence intervals will also be saved in the corresponding folder. To conduct online statistical inference on the processed data, run the following script:
+As described in Section 5 of the main text, we selected three terms of interest: “investment”, “schedule”, and “per cent” for statistical inference. These terms correspond to feature indices 6795, 7856, and 22608, respectively. Users can specify which feature to analyze by modifying line 13 of the script file `run_realdata.py`. The trace plot and test prediction error will be saved in a folder, for example, `./realdata_result/feature6795`. Online estimates and confidence intervals will also be saved in the corresponding folder. To conduct online statistical inference on the processed data, run the following script:
 
 ```bash
 python run_realdata.py
