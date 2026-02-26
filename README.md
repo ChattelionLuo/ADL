@@ -94,7 +94,7 @@ To extract uni-gram and bi-gram features from the raw data, ensure that the raw 
 python process.py
 ```
 
-The processed data will be saved as sparse matrices in `bigram_X.npz` and `bigram_y.npz` for further analysis. For convenience and to facilitate an easier walkthrough of the code, we have included these two processed data files in (here)[https://drive.google.com/drive/folders/1olYl-iqU4_pOgmdSgUYuL90zrnfRXQ4a?usp=sharing]. Users may skip the feature extraction step and proceed directly to online inference if desired.
+The processed data will be saved as sparse matrices in `bigram_X.npz` and `bigram_y.npz` for further analysis. For convenience and to facilitate an easier walkthrough of the code, we have included these two processed data files in [click here](https://drive.google.com/drive/folders/1olYl-iqU4_pOgmdSgUYuL90zrnfRXQ4a?usp=sharing). Users may skip the feature extraction step and proceed directly to online inference if desired.
 
 As described in Section 5 of the main text, we selected three terms of interest: “investment”, “schedule”, and “per cent” for statistical inference. These terms correspond to feature indices 6795, 7856, and 22608, respectively. Users can specify which feature to analyze by modifying line 13 of the script file `run_realdata.py`.py. The trace plot and test prediction error will be saved in a folder, for example, `./realdata_result/feature6795`. Online estimates and confidence intervals will also be saved in the corresponding folder. To conduct online statistical inference on the processed data, run the following script:
 
