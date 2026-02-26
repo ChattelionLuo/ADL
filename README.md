@@ -49,8 +49,10 @@ Below is a list of execution files for reproducing numerical results of ADL pres
 
 * [adl.py]: This file implements the **Approximated Debiased Lasso (ADL)**, the main method proposed in the paper for online statistical inference in high-dimensional GLMs.
 <br>
+
 * [adl_realdata.py]: This file implements  the ADL algorithm for real data analysis, which is compatible with sparse arrays.
 <br>
+
 * [radar.py]: This file contains the implementation of the **Regularization Annealed Epoch Dual Averaging (RADAR)** and **Adaptive RADAR**, which are core components of the ADL algorithm.
 
 
