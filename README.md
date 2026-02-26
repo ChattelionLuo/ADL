@@ -2,6 +2,8 @@
 
 This repository contains the source code for the **Approximated Debiased Lasso (ADL)** algorithm, designed for online statistical inference in high-dimensional generalized linear models (GLMs) with streaming data. The algorithm is particularly useful for scenarios where data arrives sequentially, and efficient, real-time inference is required.
 
+**Maintainer:** Yuanhang Luo (chattelion.luo@connect.polyu.hk).
+
 **Recommended citation:** Han, R., Luo, L., Luo, Y., Lin, Y., & Huang, J. (2024). Adaptive debiased lasso in high-dimensional GLMs with streaming data. arXiv preprint arXiv:2405.18284.
 
 ---
