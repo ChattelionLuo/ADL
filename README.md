@@ -6,7 +6,7 @@ This repository contains the source code for the **Approximated Debiased Lasso (
 
 ---
 
-**Remark:** This implementation also encompasses the Online Debiased Stochastic Gradient Descent (OnlineDSGD) algorithm in [Han, et al., 2024](https://academic.oup.com/biomet/article/111/1/93/7232226) for linear models. To utilize OnlineDSGD, simply set `family = "gaussian"` (e.g., within `run_table2.py`). This configuration directs the script to generate linear model data and perform inference using the OnlineDSGD method.
+**Remark:** This implementation also encompasses the Online Debiased Stochastic Gradient Descent (**OnlineDSGD**) algorithm in [Han, et al., 2024](https://academic.oup.com/biomet/article/111/1/93/7232226) for linear models. To utilize OnlineDSGD, simply set `family = "gaussian"` (e.g., within `run_table2.py`). This configuration directs the script to generate linear model data and perform inference using the OnlineDSGD method.
 
 ---
 ## Repository Structure
