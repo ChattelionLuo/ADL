@@ -22,7 +22,7 @@ Below is a list of execution files for reproducing numerical results of ADL pres
 * [run_figure3.py]: This execution file contains the codes necessary to reproduce Figure 3 in the main text. In this demonstration, the dimension $p$ is raised to $20000$ with $n=1000,s_0 = 20, \boldsymbol{\Sigma}=\\{0.5^{|i-j|}\\}_{i,j=1,\dots,p}$. The confidence intervals are constructed for three randomly selected parameters from each category of $\boldsymbol{\beta}^*$.
 <br>
 
-* [run_tableS5.py]: This execution file contains the codes necessary to reproduce the column "ADL" of Table S.5 (multiple levels of signal strength) in the supplementary material. This simulation is conducted over 500 replications with $n=200, p=500, s_0=10, \boldsymbol{\Sigma}=\\{0.5^{|i-j|}\\}_{i,j=1,\dots,p}$. In this case, the non-zero coefficients are equally selected from $\{0.2,0.4,0.6,0.8,1.0\}$
+* [run_tableS5.py]: This execution file contains the codes necessary to reproduce the column "ADL" of Table S.5 (multiple levels of signal strength) in the supplementary material. This simulation is conducted over 500 replications with $n=200, p=500, s_0=10, \boldsymbol{\Sigma}=\\{0.5^{|i-j|}\\}_{i,j=1,\dots,p}$. In this case, the non-zero coefficients are equally selected from $\\{0.2,0.4,0.6,0.8,1.0\\}$
 <br>
 
 * [run_figureS2.py]: This execution file contains the codes necessary to reproduce the left panel of Figure 2 (power curve) in the supplementary material. This figure shows power curves of Wald test for a single coefficient under the first setting in Scetion S.3.2, where $p=500, s_0=6$, with varying sample size and $\boldsymbol{\Sigma}=\\{0.5^{|i-j|}\\}_{i, j=1, \ldots, p}$. Simulation results are averaged over 2000 replications.
